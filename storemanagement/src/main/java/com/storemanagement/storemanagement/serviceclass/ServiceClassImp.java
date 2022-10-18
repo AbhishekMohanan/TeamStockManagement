@@ -16,26 +16,25 @@ public class ServiceClassImp implements ServiceClass {
 
 	@Override
 	public List<Supplier> viewSupplier() {
-		
+
 		return myRepository.findAll();
 	}
 
 	@Override
 	public void insertSupplier(Supplier supplier) {
 		this.myRepository.save(supplier);
-		
+
 	}
 
 	@Override
-	public void deleteSupplier(int supplier_id){
+	public void deleteSupplier(int supplier_id) {
 		myRepository.deleteById(supplier_id);
-		
-		
+
 	}
 
 	@Override
 	public Supplier editSupplier(int supplier_id) {
-	
+
 		return myRepository.findById(supplier_id).get();
 	}
 
@@ -43,6 +42,5 @@ public class ServiceClassImp implements ServiceClass {
 //	public int updateSuppler(int supplier_id, String supplier_name, String mobile_no) {
 //		return  myRepository.update(supplier_id, supplier_name, mobile_no);
 //	}
-	
 
 }

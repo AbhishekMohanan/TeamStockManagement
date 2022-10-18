@@ -10,18 +10,19 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+
 @Entity
-@Table(name="Supplier")
-public class Supplier  {
+@Table(name = "Supplier")
+public class Supplier {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 
 	private int supplier_id;
-	@Column(name="supplierName")
+	@Column(name = "supplierName")
 	private String supplier_name;
-	@Column(name="mobileNo")
+	@Column(name = "mobileNo")
 	private String mobile_no;
-	@OneToOne(mappedBy = "suppliers" , fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	@OneToOne(mappedBy = "suppliers", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	Company company;
 
 	public Company getCompany() {

@@ -39,31 +39,18 @@ button {
 	<h2>Edit Company Details</h2>
 	<div id="body">
 		<form:form action="/updated" method="post"
-			modelAttribute="studentdetails">
+			modelAttribute="">
 
 
 			<div class="form-outline mb-4">
 				<input type="text" name="student_name"
-					value="${Editdetails.getStudent_name()}" id="form4Example1"
+					value="${Editdetails.getCompanyName()}" id="form4Example1"
 					class="form-control" /> <label class="form-label"
-					for="form4Example1">Name</label>
+					for="form4Example1">Company Name</label>
 			</div>
-			<input type="hidden" name="student_id"
-				value="${Editdetails.getStudent_id() }" />
+			
 
-
-			<div class="form-outline mb-4">
-				<input type="password" name="student_password"
-					value="${Editdetails.getStudent_password()}" id="form4Example2"
-					class="form-control" /> <label class="form-label"
-					for="form4Example2">Password</label>
-			</div>
-
-			<div class="form-outline mb-4">
-				<input type="Text" name="branch" value="${Editdetails.getBranch()}"
-					id="form4Example2" class="form-control" /> <label
-					class="form-label" for="form4Example2">Branch</label>
-			</div>
+		
 
 
 			<button type="submit" class="btn btn-primary btn-block mb-4">Update</button>

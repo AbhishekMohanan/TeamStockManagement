@@ -39,15 +39,15 @@
 
    <h2> Add Company Details</h2>
 	<div id = "body">
-	<form action="/added" method="post" modelAttribute ="comapnydetails">
+	<form action="/added" method="post" modelAttribute ="companydetails">
 
   <div class="form-outline mb-4">
-    <input type="text"  name="student_name" id="form4Example1" class="form-control" />
+    <input type="text"  name="companyName" id="form4Example1" class="form-control" />
     <label class="form-label" for="form4Example1"> Company Name</label>
   </div>
 
 
-  <button type="submit" class="btn btn-primary btn-block mb-4">Register</button>
+  <button type="submit" class="btn btn-primary btn-block mb-4">Add Company</button>
 </form>
 </div>
 </body>

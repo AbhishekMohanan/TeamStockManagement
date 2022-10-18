@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Supplier View Page</title>
@@ -15,10 +15,8 @@
 	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
 	crossorigin="anonymous">
 <style>
- 
 h2 {
 	text-align: center;
-	
 }
 
 a:link, a:visited {
@@ -31,29 +29,15 @@ a:link, a:visited {
 a:hover, a:active {
 	
 }
-body{
-margin-top:10%;
-}
-.h1{
-margin-left:16%;
-}
-
-table {
-	width: 60%;
-	margin-left:16%;
-}
-
-</style>	
+</style>
 
 </head>
 <body>
- <%@include file="Dashboard.jsp"%>
 	<div class="container my-2">
-	<div class = "h1">
-		<h1 id="h1">Supplier List</h1>
-		<br> <a href="/SupplierAdd" class="btn btn-primary btn-sm mb-3" > Add
+		<h1>Supplier List</h1>
+		<br> <a href="SupplierAdd" class="btn btn-primary btn-sm mb-3"> Add
 			Supplier </a>
-</div>
+
 		<h2></h2>
 
 		<view:if test="${supplierdetails.size()==0}">

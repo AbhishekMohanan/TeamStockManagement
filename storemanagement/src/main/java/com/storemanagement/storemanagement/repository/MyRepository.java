@@ -18,6 +18,3 @@ public interface MyRepository extends JpaRepository<Supplier, Integer> {
 //			@Param("mobile") String mobile_no );
 
 }
-	
-
-

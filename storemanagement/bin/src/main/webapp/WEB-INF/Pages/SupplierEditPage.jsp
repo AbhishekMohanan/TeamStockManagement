@@ -11,37 +11,31 @@
 	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
 	crossorigin="anonymous">
 <style>
-	
-	form{
-	      text-align: center;
-	      width:35%;
-	      
-	}
-	body{
-margin-top:8%;
-}
-	#body{
+form {
 	text-align: center;
-	padding-left: 550px;
+	width: 35%;
+}
+
+#body {
+	text-align: center;
+	padding-left: 520px;
 	padding-top: 45px;
-	}
-	
-	h2{
-	 text-align: center;
-	  padding-top: 10px;
-	  margin-left:8%;
-	 
-	}
-	
-	button{
-	width:15%;
-	}
+}
+
+h2 {
+	text-align: center;
+	padding-top: 10px;
+}
+
+button {
+	width: 15%;
+}
 </style>
 
 
 </head>
 <body>
- <%@include file="Dashboard.jsp"%>
+
 	<h2>Edit Supplier Details</h2>
 	<div id="body">
 		<form:form action="/updated" method="post"
