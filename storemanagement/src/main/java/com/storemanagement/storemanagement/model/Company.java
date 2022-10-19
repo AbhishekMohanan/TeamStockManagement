@@ -15,12 +15,13 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.GenericGenerator;
+
 @Entity
 @Table(name = "Company")
 public class Company {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-
 	private int companyId;
 	@Column(name = "companyname")
 	private String companyName;

@@ -7,7 +7,7 @@ import com.storemanagement.storemanagement.model.Company;
 public interface CompanyServiceClass {
 	List<Company> viewCompany();
 	void insertComapny(Company company);
-	void deleteCompany(int companyId);
+	void deleteCompany(Integer companyId);
 	Company editCompany(int companyId);
 
 }

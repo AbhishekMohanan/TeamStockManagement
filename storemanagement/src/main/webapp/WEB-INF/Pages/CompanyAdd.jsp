@@ -11,20 +11,24 @@
 	crossorigin="anonymous">
 	<style >
 	
-	form{
+form{
 	      text-align: center;
 	      width:35%;
+	      
 	}
-	
+	body{
+margin-top:8%;
+}
 	#body{
 	text-align: center;
-	padding-left: 520px;
+	padding-left: 550px;
 	padding-top: 45px;
 	}
 	
 	h2{
 	 text-align: center;
 	  padding-top: 10px;
+	  margin-left:8%;
 	 
 	}
 	
@@ -36,10 +40,10 @@
 	
 </head>
 <body >
-
-   <h2> Add Company Details</h2>
+ <%@include file="Dashboard.jsp"%>
+<h2> Add Company Details</h2>
 	<div id = "body">
-	<form action="/added" method="post" modelAttribute ="companydetails">
+	<form action="/companyadded" method="post" modelAttribute ="companydetails">
 
   <div class="form-outline mb-4">
     <input type="text"  name="companyName" id="form4Example1" class="form-control" />
@@ -50,5 +54,4 @@
   <button type="submit" class="btn btn-primary btn-block mb-4">Add Company</button>
 </form>
 </div>
-</body>
 </html>

@@ -27,7 +27,7 @@ public class CompanyServiceImp implements CompanyServiceClass {
 	}
 
 	@Override
-	public void deleteCompany(int companyId) {
+	public void deleteCompany(Integer companyId) {
 		this.companyRepository.deleteById(companyId);
 	}
 

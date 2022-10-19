@@ -17,6 +17,7 @@
 <style>
 h2 {
 	text-align: center;
+	
 }
 
 a:link, a:visited {
@@ -29,16 +30,30 @@ a:link, a:visited {
 a:hover, a:active {
 	
 }
-</style>
+body{
+margin-top:10%;
+}
+.h1{
+margin-left:16%;
+}
+
+table {
+	width: 60%;
+	margin-left:16%;
+}
+
+</style>	
 
 </head>
 <body>
+ <%@include file="Dashboard.jsp"%>
 	<div class="container my-2">
+	<div class ="h1">
 		<h1>Company List</h1>
-		<br> <a href="form" class="btn btn-primary btn-sm mb-3"> Add
+		<br> <a href="CompanyAdd" class="btn btn-primary btn-sm mb-3"> Add
 			Company </a>
-
-		<h2></h2>
+</div>
+		
 
 		<view:if test="${companydetails.size()==0}">
 			<h2>No Company Registered</h2>
@@ -49,18 +64,20 @@ a:hover, a:active {
 				<tr>
 					<th scope="col">Company ID</th>
 					<th scope="col">Company Name</th>
+					<th scope="col">Actions</th>                                                                                                         
 				</tr>
 			</thead>
 			<view:forEach var="company" items="${companydetails}">
 				<tr>
 					<td>${company.getCompanyId()}</td>
 					<td>${company.getCompanyName()}</td>
+					
 					<td>
 						<button type="sumbit" class="btn btn-primary">
-							<a href='/e/${company.getCompanyId()}'>Edit</a>
+							<a href='/ce/${company.getCompanyId()}'>Edit</a>
 						</button> &nbsp;&nbsp;&nbsp;
 						<button type="sumbit" class="btn btn-danger">
-							<a href='delete/${company.getCompanyId()}'> Delete</a>
+							<a href='cd/${company.getCompanyId()}'> Delete</a>
 						</button>
 					</td>
 

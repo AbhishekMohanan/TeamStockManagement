@@ -5,7 +5,7 @@
 <head>
 <meta charset="utf-8">
 <title></title>
-<link rel="stylesheet" href="css/sellstyle.css">
+<link rel="stylesheet" href="/css/sellstyle.css">
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
 <script
@@ -39,24 +39,16 @@
 						class="fas fa-desktop"></i><span>Dashboard</span>
 				</a></li>
 				<li class="item"><a href="/ViewSupplierDetails" class="menu-btn"> <i
-						class="fa fa-building"></i><span>Company</span>
+						class="fa fa-building"></i><span>Supplier</span>
 				</a></li>
-				<li class="item"><a href="category" class="menu-btn"> <i
-						class="fa fa-shopping-basket"></i><span>Category</span>
+				<li class="item"><a href="/ViewCompanyDetails" class="menu-btn"> <i
+						class="fa fa-shopping-basket"></i><span>Company</span>
 				</a></li>
-				<li class="item" id="settings"><a href="#settings"
+				<li class="item" id="settings"><a href=""
 					class="menu-btn"> <i class="fa fa-shopping-cart"></i><span>Product
-							<i class="fas fa-chevron-down drop-down"></i>
 					</span>
 				</a>
-					<div class="sub-menu">
-						<a href="#"><i class="fa fa-mobile"></i><span></span></a> <a
-							href="#"><i class="fa fa-television"></i><span></span></a> <a
-							href="#"><i class="fa fa-home"></i><span>
-								</span></a> <a href="#"><i class="fa fa-headphones"></i><span>
-								</span></a> <a href="#"><i class="fa fa-clock-o"></i><span>
-								</span></a> <a href="#"><i class="fa fa-laptop"></i><span></span></a>
-					</div></li>
+					
 				<li class="item" id="reports"><a href="#reports"
 					class="menu-btn"> <i class="fa fa-list "></i><span>Reports<i
 							class="fas fa-chevron-down drop-down"></i></span>

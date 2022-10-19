@@ -66,6 +66,7 @@ table {
 					<th scope="col">Supplier ID</th>
 					<th scope="col">Supplier Name</th>
 					<th scope="col">Supplier Mobile Number</th>
+					<th scope="col">Actions</th>
 					
 
 				</tr>

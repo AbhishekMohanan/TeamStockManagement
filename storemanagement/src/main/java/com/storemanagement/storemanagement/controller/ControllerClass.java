@@ -22,6 +22,12 @@ public class ControllerClass {
 	@RequestMapping("/")
 	public String login() {
 	//model.addAttribute("supplierdetails", new Supplier());
+	return "LogIn";
+	}
+	
+	@RequestMapping("/Dashboard")
+	public String dashboard() {
+	//model.addAttribute("supplierdetails", new Supplier());
 	return "Dashboard";
 	}
 
@@ -53,8 +59,8 @@ public class ControllerClass {
 
 	}
 
-	@RequestMapping("/e/{supplier}")
-	public String edit(@PathVariable("supplier") int supplier_id, Model model) {
+	@RequestMapping("/e/{supplier_id}")
+	public String edit(@PathVariable("supplier_id") int supplier_id, Model model) {
 		Supplier supplier = serviceClass.editSupplier(supplier_id);
 		model.addAttribute("Editdetails", supplier);
 		return "SupplierEditPage";

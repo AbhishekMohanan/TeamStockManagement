@@ -6,6 +6,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Edit Supplier Details</title>
+
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
 	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
@@ -37,7 +38,11 @@ margin-top:8%;
 	width:15%;
 	}
 </style>
-
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+	charset="utf-8"></script>
 
 </head>
 <body>
@@ -52,7 +57,7 @@ margin-top:8%;
 				<input type="text" name="student_name"
 					value="${Editdetails.getSupplier_name()}" id="form4Example1"
 					class="form-control" /> <label class="form-label"
-					for="form4Example1">Supplier Name</label>
+					for="form4Example1">Supplier_ Name</label>
 			</div>
 			
 				<div class="form-outline mb-4">

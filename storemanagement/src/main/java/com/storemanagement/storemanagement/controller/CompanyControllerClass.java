@@ -40,13 +40,13 @@ public class CompanyControllerClass {
 		return "redirect:/ViewCompanyDetails";
 	}
 	
-	@RequestMapping("/d/{companyId}")
-	public String delete(@PathParam("companyId") int companyId, Model model) {
+	@RequestMapping("/cd/{companyId}")
+	public String delete(@PathParam("companyId") Integer companyId, Model model) {
 		companyServiceClass.deleteCompany(companyId);
 		return "redirect:/ViewCompanyDetails";
 	}
 	
-	@RequestMapping("/ef/{companyId}")
+	@RequestMapping("/ce/{companyId}")
 	public String edit(@PathParam("companyId") int companyId, Model model) {
 		Company company = companyServiceClass.editCompany(companyId);
 		model.addAttribute("Editdetails", company);
