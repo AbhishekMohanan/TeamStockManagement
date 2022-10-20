@@ -2,7 +2,12 @@ package com.storemanagement.storemanagement.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -12,6 +17,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.storemanagement.storemanagement.model.Supplier;
+
+
 import com.storemanagement.storemanagement.serviceinterface.ServiceClass;
 
 @Controller
@@ -19,16 +26,27 @@ public class ControllerClass {
 	@Autowired
 	private ServiceClass serviceClass;
 	
-	@RequestMapping("/")
-	public String login() {
-	//model.addAttribute("supplierdetails", new Supplier());
-	return "LogIn";
-	}
+	 @RequestMapping(value = "/login", method = RequestMethod.GET)
+	    public String login(Model model, String error, String logout) {
+	        if (error != null)
+	            model.addAttribute("errorMsg", "Your username and password are invalid.");
+
+	        if (logout != null)
+	            model.addAttribute("msg", "You have been logged out successfully.");
+
+	        return "LogIn";
+	    }
 	
-	@RequestMapping("/Dashboard")
-	public String dashboard() {
+	@RequestMapping("/")
+	public String dashboard(HttpServletRequest request,Authentication authentication) {
 	//model.addAttribute("supplierdetails", new Supplier());
-	return "Dashboard";
+		   HttpSession session = request.getSession();
+		    
+		    session.setAttribute("sess",authentication.getName());
+//		    System.out.println("checking"+authentication.getPrincipal().getEmail());
+//	       if (( authentication.getPrincipal().getroles()=="ROLE_CUSTOMER")
+	       
+	         return "Dashboard";
 	}
 
 	@RequestMapping("/ViewSupplierDetails")

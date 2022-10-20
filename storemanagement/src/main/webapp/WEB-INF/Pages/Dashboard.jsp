@@ -22,6 +22,7 @@
 					Store <span>Management</span>
 				</div>
 				<ul>
+				Welcome ${sess}
 					<li><a href="#"><i class="fas fa-search"></i></a></li>
 					<li><a href="#"><i class="fas fa-bell"></i></a></li>
 					<li><a href="#"><i class="fas fa-power-off"></i></a></li>
