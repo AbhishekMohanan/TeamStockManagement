@@ -40,7 +40,7 @@
 				<span class="login100-form-title p-b-41">
 					Account Login
 				</span>
-				<form class="login100-form validate-form p-b-33 p-t-5" action = "ViewSupplierdetails">
+				<form class="login100-form validate-form p-b-33 p-t-5" method = post action = "/Dashboard">
 
 					<div class="wrap-input100 validate-input" data-validate = "Enter username">
 						<input class="input100" type="text" name="username" placeholder="User name">

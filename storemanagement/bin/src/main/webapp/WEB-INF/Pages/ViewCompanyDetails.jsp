@@ -9,7 +9,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Home Page</title>
+<title>Company Details</title>
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
 	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
@@ -17,6 +17,7 @@
 <style>
 h2 {
 	text-align: center;
+	
 }
 
 a:link, a:visited {
@@ -29,44 +30,54 @@ a:link, a:visited {
 a:hover, a:active {
 	
 }
-</style>
+body{
+margin-top:10%;
+}
+.h1{
+margin-left:16%;
+}
+
+table {
+	width: 60%;
+	margin-left:16%;
+}
+
+</style>	
 
 </head>
 <body>
+ <%@include file="Dashboard.jsp"%>
 	<div class="container my-2">
-		<h1>Student List</h1>
-		<br> <a href="form" class="btn btn-primary btn-sm mb-3"> Add
-			Student </a>
+	<div class ="h1">
+		<h1>Company List</h1>
+		<br> <a href="CompanyAdd" class="btn btn-primary btn-sm mb-3"> Add
+			Company </a>
+</div>
+		
 
-		<h2></h2>
-
-		<view:if test="${studentdetails.size()==0}">
-			<h2>No Students Registered</h2>
+		<view:if test="${companydetails.size()==0}">
+			<h2>No Company Registered</h2>
 		</view:if>
 
 		<table border="1" class="table table-striped table-responsive-md">
 			<thead>
 				<tr>
-					<th scope="col">Student ID</th>
-					<th scope="col">Student Name</th>
-					<th scope="col">Student Password</th>
-					<th scope="col">Branch</th>
-					<th scope="col">Actions</th>
-
+					<th scope="col">Company ID</th>
+					<th scope="col">Company Name</th>
+					<th scope="col">Actions</th>                                                                                                         
 				</tr>
 			</thead>
-			<view:forEach var="student" items="${studentdetails}">
+			<view:forEach var="company" items="${companydetails}">
 				<tr>
-					<td>${student.getStudentId()}</td>
-					<td>${student.getStudent_name()}</td>
-					<td>${student.getStudent_password()}</td>
-					<td>${student.getBranch()}</td>
+					<td>${company.getCompanyId()}</td>
+					<td>${company.getCompanyName()}</td>
+					
 					<td>
 						<button type="sumbit" class="btn btn-primary">
-							<a href='/e/${student.getStudentId()}'>Edit</a>
+							<a href='/ce/${company.getCompanyId()}'>Edit</a>
 						</button> &nbsp;&nbsp;&nbsp;
 						<button type="sumbit" class="btn btn-danger">
-							<a href='delete/${student.getStudentId()}'> Delete</a>
+							<a href='cd/${company.getCompanyId()}'> Delete</a>
 						</button>
 					</td>
 
